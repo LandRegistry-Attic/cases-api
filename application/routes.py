@@ -7,7 +7,13 @@ def index():
     return 'Cases API'
 
 @app.route('/cases', methods=["GET"])
-def cases():
-    json_data=open('application/static/data/cases.json', "r")
+def getCases():
+    json_data=open('application/static/data/cases.json')
+    data = json.load(json_data)
+    return json.dumps(data)
+
+@app.route('/cases/<caseid>', methods=["GET"])
+def getCase(caseid):
+    json_data=open('application/static/data/' + caseid + '.json')
     data = json.load(json_data)
     return json.dumps(data)
