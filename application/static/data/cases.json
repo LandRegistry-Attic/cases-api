@@ -2,21 +2,21 @@
   "cases": [
     {
       "titleNumber": "DN1",
-      "applicationReference": "LR0001",
-      "dateReceived": "1997-02-19T00:00:01Z",
+      "applicationReference": "LR1011",
+      "dateReceived": "1993-11-01T00:00:01Z",
       "entries": [
         {
           "type": "charge",
-          "date": "1997-02-19T12:00:00Z",
-          "text": "REGISTERED CHARGE dated 13 February 1997."
+          "date": "1993-11-01T12:00:00Z",
+          "text": "REGISTERED CHARGE dated 13 August 1993."
         },
         {
           "type": "charge proprietor",
-          "date": "1997-02-19T12:00:00Z",
+          "date": "1993-11-01T12:00:00Z",
           "text": "Proprietor: GE Money Home Finance Limited (Co. Regn. No. 592986) of Building 4, Hatters Lane, Croxley Green Business Park, Watford WD18 8YF"
         }
       ],
-      "mortgageDate": "1997-02-19T00:00:01Z",
+      "mortgageDate": "1993-11-01T00:00:01Z",
       "lender": "GE Money Home Finance Limited"
     },
     {
@@ -40,21 +40,21 @@
     },
     {
       "titleNumber": "DN1",
-      "applicationReference": "LR1011",
-      "dateReceived": "1993-11-01T00:00:01Z",
+      "applicationReference": "LR0001",
+      "dateReceived": "1997-02-19T00:00:01Z",
       "entries": [
         {
           "type": "charge",
-          "date": "1993-11-01T12:00:00Z",
-          "text": "REGISTERED CHARGE dated 13 August 1993."
+          "date": "1997-02-19T12:00:00Z",
+          "text": "REGISTERED CHARGE dated 13 February 1997."
         },
         {
           "type": "charge proprietor",
-          "date": "1993-11-01T12:00:00Z",
+          "date": "1997-02-19T12:00:00Z",
           "text": "Proprietor: GE Money Home Finance Limited (Co. Regn. No. 592986) of Building 4, Hatters Lane, Croxley Green Business Park, Watford WD18 8YF"
         }
       ],
-      "mortgageDate": "1993-11-01T00:00:01Z",
+      "mortgageDate": "1997-02-19T00:00:01Z",
       "lender": "GE Money Home Finance Limited"
     },
     {
