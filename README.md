@@ -6,6 +6,12 @@
 
 This repo is the API to retrieve a list of cases.
 
+These are the available endpoints:
+
+`/cases` - Returns all available cases
+
+`/cases/<casenumber>` - Returns a specific case
+
 ##How to run unit tests in development
 
 ```
