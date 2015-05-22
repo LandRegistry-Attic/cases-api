@@ -1,0 +1,58 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "Get a case from API",
+    "line": 1,
+    "description": "",
+    "id": "get-a-case-from-api",
+    "uri": "features/get_case_from_api.feature",
+    "elements": [
+      {
+        "keyword": "Scenario",
+        "name": "Get case from api",
+        "line": 3,
+        "description": "",
+        "id": "get-a-case-from-api;get-case-from-api",
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "that a case is lodged",
+            "line": 4,
+            "match": {
+              "location": "features/step-definitions/get_case_from_api.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 107342
+            }
+          },
+          {
+            "keyword": "When ",
+            "name": "I give a valid get request",
+            "line": 5,
+            "match": {
+              "location": "features/step-definitions/get_case_from_api.rb:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4731888
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "the case details are returned",
+            "line": 6,
+            "match": {
+              "location": "features/step-definitions/get_case_from_api.rb:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 74071
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
