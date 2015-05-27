@@ -16,11 +16,9 @@ These are the available endpoints:
 
 ```
 Vagrant SSH into repo
-navigate to cases-api
+Type: 
+source /vagrant/.venv/cases-api/bin/activate
 
-run the following commands (until 'workon' is implemented in the environment)
-
-sudo pip install -r requirements.txt
 sudo pip install -r requirements_test.txt
 
 Then to run the tests issue this
