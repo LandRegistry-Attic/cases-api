@@ -5,6 +5,8 @@ import os
 from application import app
 from application.utils import get_reference
 
+case_data = '{ "dateReceived": "1993-11-01T12:00:00Z", "lender": "GE Money Home Finance Limited", "mortgageDate": "1993-08-13T12:00:00Z", "titleNumber": "DN9"}'
+
 class TestCaseAPI(unittest.TestCase):
 
     def setUp(self):
@@ -18,7 +20,7 @@ class TestCaseAPI(unittest.TestCase):
         response = self.app.get('/cases')
         response_json = json.loads(response.data.decode())
         cases = response_json['cases']
-        assert len(cases) == 4
+        assert len(cases) > 1
         assert cases[0]['titleNumber'] == 'DN1'
 
     def test_single_case(self):
@@ -35,3 +37,8 @@ class TestCaseAPI(unittest.TestCase):
 
         ref_on_file = "AB" + ref_on_file_number
         assert ref_from_method == ref_on_file
+
+    def test_add_new_case(self):
+        response = self.app.post('/cases', data=case_data, headers={"Content-Type":"application/json"})
+        assert response.status_code == 200
+        
