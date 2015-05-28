@@ -12,6 +12,19 @@ These are the available endpoints:
 
 `/cases/<casenumber>` - Returns a specific case
 
+## Data structure
+
+This api has a route "/cases", when posted to will create a new case
+and return a unique reference for that case. The api expects the case information
+posted to look like this:
+
+{
+    "dateReceived": "1993-11-01T12:00:00Z",
+    "lender": "Example Lender",
+    "mortgageDate": "1993-08-13T12:00:00Z",
+    "titleNumber": "DN1"
+}
+
 ##How to run unit tests in development
 
 ```
@@ -27,5 +40,5 @@ Then to run the tests issue this
 
 py.test --cov application tests/ --cov-report=term --cov-report=html
 
-A htmlcov/ folder will be created at the root of project with a code coverage report. 
+A htmlcov/ folder will be created at the root of project with a code coverage report.
 ```
