@@ -23,12 +23,14 @@ def getCases():
         jsonFile=open('application/static/data/cases.json')
         case_list = json.load(jsonFile)
 
+        applicationReference = get_reference()
+
         #import pdb; pdb.set_trace()
 
         #Create a new case from the case_data received
         case = {}
         case["titleNumber"] = case_data["titleNumber"]
-        case["applicationReference"] = "LR3456"
+        case["applicationReference"] = applicationReference
         case["dateReceived"] = case_data["dateReceived"]
         case["mortgageDate"] = case_data["mortgageDate"]
         case["lender"] = case_data["lender"]

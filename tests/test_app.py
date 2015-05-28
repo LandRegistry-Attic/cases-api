@@ -30,15 +30,19 @@ class TestCaseAPI(unittest.TestCase):
         assert case['titleNumber'] == 'DN1'
         assert case['entries'][0]['type'] == 'charge'
 
-    def test_get_reference(self):
-        ref_from_method = get_reference()
-        with open('application/static/data/reference.txt',"r+") as file:
-            ref_on_file_number = file.read()
-
-        ref_on_file = "AB" + ref_on_file_number
-        assert ref_from_method == ref_on_file
-
     def test_add_new_case(self):
+        # Post a json object to the route and then check that the correct reference is returned in the json
+        # This test also encompasses a test of the get_reference function and so the dedicated test for that has
+        # now been removed.
         response = self.app.post('/cases', data=case_data, headers={"Content-Type":"application/json"})
+        response_json = json.loads(response.data.decode())
+
+        with open('application/static/data/reference.txt',"r") as file:
+            ref_on_file_number = file.read()
+        ref_on_file = "AB" + ref_on_file_number
+
+        app_ref = response_json['applicationReference']
+
         assert response.status_code == 200
-        
+        assert app_ref == ref_on_file
+
