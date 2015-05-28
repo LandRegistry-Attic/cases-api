@@ -7,6 +7,8 @@ from application.utils import get_reference
 
 case_data = '{ "dateReceived": "1993-11-01T12:00:00Z", "lender": "GE Money Home Finance Limited", "mortgageDate": "1993-08-13T12:00:00Z", "titleNumber": "DN9"}'
 
+case_data = '{ "dateReceived": "1993-11-01T12:00:00Z", "lender": "GE Money Home Finance Limited", "mortgageDate": "1993-08-13T12:00:00Z", "titleNumber": "DN9"}'
+
 class TestCaseAPI(unittest.TestCase):
 
     def setUp(self):
@@ -45,4 +47,3 @@ class TestCaseAPI(unittest.TestCase):
 
         assert response.status_code == 200
         assert app_ref == ref_on_file
-
