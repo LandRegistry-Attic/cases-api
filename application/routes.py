@@ -25,8 +25,6 @@ def getCases():
 
         applicationReference = get_reference()
 
-        #import pdb; pdb.set_trace()
-
         #Create a new case from the case_data received
         case = {}
         case["titleNumber"] = case_data["titleNumber"]
