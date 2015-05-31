@@ -68,4 +68,7 @@ Then to push feature file to relish type:
 relish push LRCasework/cases-api
 
 You will be prompted to enter the email address and password used to set up your relish account
+
+Features can then be viewed at:
+http://www.relishapp.com/LRCasework/ 
 ```
