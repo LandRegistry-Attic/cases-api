@@ -45,7 +45,7 @@ A htmlcov/ folder will be created at the root of project with a code coverage re
 
 ```
 Vagrant SSH into repo
-navigate to acceptance test folder in cases-frontend
+navigate to acceptance test folder in cases-api
 
 Then to run the tests enter either
 
