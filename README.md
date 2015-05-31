@@ -40,3 +40,15 @@ py.test --cov application tests/ --cov-report=term --cov-report=html
 
 A htmlcov/ folder will be created at the root of project with a code coverage report.
 ```
+
+##How to run acceptance tests in development
+
+```
+Vagrant SSH into repo
+navigate to acceptance test folder in cases-frontend
+
+Then to run the tests enter either
+
+sh run-tests.sh
+./run-tests.sh
+```
