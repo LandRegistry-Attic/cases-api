@@ -52,3 +52,20 @@ Then to run the tests enter either
 sh run-tests.sh
 ./run-tests.sh
 ```
+
+##How to put feature files into Relish
+
+```
+You need to be assigned writing privelges for the LR Casework Relish account
+
+Vagrant SSH into repo
+navigate to acceptance test folder in cases-api 
+
+The first time you ssh in type:
+sudo gem install relish
+
+Then to push feature file to relish type:
+relish push LRCasework/cases-api
+
+You will be prompted to enter your email address and password you used to set up your relish account
+```
