@@ -67,5 +67,5 @@ sudo gem install relish
 Then to push feature file to relish type:
 relish push LRCasework/cases-api
 
-You will be prompted to enter your email address and password you used to set up your relish account
+You will be prompted to enter the email address and password used to set up your relish account
 ```
