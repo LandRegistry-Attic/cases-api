@@ -3,14 +3,14 @@
     "keyword": "Feature",
     "name": "Get a case from API",
     "line": 1,
-    "description": "",
+    "description": "\nAs a caseworker I need to access dynamic data from a work list So that I can do my work\n\nAcceptance Criteria\ndata is supplied through dynamic web service",
     "id": "get-a-case-from-api",
     "uri": "features/get_case_from_api.feature",
     "elements": [
       {
         "keyword": "Scenario",
         "name": "Get case from api",
-        "line": 3,
+        "line": 8,
         "description": "",
         "id": "get-a-case-from-api;get-case-from-api",
         "type": "scenario",
@@ -18,37 +18,37 @@
           {
             "keyword": "Given ",
             "name": "that a case is lodged",
-            "line": 4,
+            "line": 9,
             "match": {
               "location": "features/step-definitions/get_case_from_api.rb:1"
             },
             "result": {
               "status": "passed",
-              "duration": 107342
+              "duration": 112602
             }
           },
           {
             "keyword": "When ",
             "name": "I give a valid get request",
-            "line": 5,
+            "line": 10,
             "match": {
               "location": "features/step-definitions/get_case_from_api.rb:5"
             },
             "result": {
               "status": "passed",
-              "duration": 4731888
+              "duration": 12352758
             }
           },
           {
             "keyword": "Then ",
             "name": "the case details are returned",
-            "line": 6,
+            "line": 11,
             "match": {
               "location": "features/step-definitions/get_case_from_api.rb:9"
             },
             "result": {
               "status": "passed",
-              "duration": 74071
+              "duration": 106356
             }
           }
         ]
