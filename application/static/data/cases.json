@@ -75,6 +75,83 @@
             "lender": "GE Money Home Finance Limited",
             "mortgageDate": "2007-08-13T12:00:00Z",
             "titleNumber": "DT91660"
+        },
+        {
+            "applicationReference": "AB29",
+            "dateReceived": "2020-11-01T12:00:00Z",
+            "lender": "Example Lender",
+            "mortgageDate": "2010-08-13T12:00:00Z",
+            "titleNumber": "DN1"
+        },
+        {
+            "applicationReference": "AB30",
+            "dateReceived": "2020-11-01T12:00:00Z",
+            "lender": "Example Lender",
+            "mortgageDate": "2010-08-13T12:00:00Z",
+            "titleNumber": "DN1"
+        },
+        {
+            "applicationReference": "AB31",
+            "dateReceived": "2020-11-01T12:00:00Z",
+            "lender": "Example Lender",
+            "mortgageDate": "2010-08-13T12:00:00Z",
+            "titleNumber": "DN1"
+        },
+        {
+            "applicationReference": "AB32",
+            "dateReceived": "2020-11-01T12:00:00Z",
+            "lender": "Example Lender",
+            "mortgageDate": "2010-08-13T12:00:00Z",
+            "titleNumber": "DN1"
+        },
+        {
+            "applicationReference": "AB33",
+            "dateReceived": "2020-11-01T12:00:00Z",
+            "lender": "Example Lender",
+            "mortgageDate": "2010-08-13T12:00:00Z",
+            "titleNumber": "DN1"
+        },
+        {
+            "applicationReference": "AB34",
+            "dateReceived": "2020-11-01T12:00:00Z",
+            "lender": "Example Lender",
+            "mortgageDate": "2010-08-13T12:00:00Z",
+            "titleNumber": "DN1"
+        },
+        {
+            "applicationReference": "AB35",
+            "dateReceived": "2020-11-01T12:00:00Z",
+            "lender": "Example Lender",
+            "mortgageDate": "2010-08-13T12:00:00Z",
+            "titleNumber": "DN1"
+        },
+        {
+            "applicationReference": "AB36",
+            "dateReceived": "2020-11-01T12:00:00Z",
+            "lender": "Example Lender",
+            "mortgageDate": "2010-08-13T12:00:00Z",
+            "titleNumber": "DN1"
+        },
+        {
+            "applicationReference": "AB37",
+            "dateReceived": "2020-11-01T12:00:00Z",
+            "lender": "Example Lender",
+            "mortgageDate": "2010-08-13T12:00:00Z",
+            "titleNumber": "DN1"
+        },
+        {
+            "applicationReference": "AB38",
+            "dateReceived": "2020-11-01T12:00:00Z",
+            "lender": "Example Lender",
+            "mortgageDate": "2010-08-13T12:00:00Z",
+            "titleNumber": "DN1"
+        },
+        {
+            "applicationReference": "AB39",
+            "dateReceived": "2020-11-01T12:00:00Z",
+            "lender": "Example Lender",
+            "mortgageDate": "2010-08-13T12:00:00Z",
+            "titleNumber": "DN1"
         }
     ]
 }
