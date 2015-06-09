@@ -32,6 +32,12 @@ def getCases():
         case["dateReceived"] = case_data["dateReceived"]
         case["mortgageDate"] = case_data["mortgageDate"]
         case["lender"] = case_data["lender"]
+        case["submissionRef"] = case_data["submissionRef"]
+        case["keyNumber"] = case_data["keyNumber"]
+        case["amountPaid"] = case_data["amountPaid"]
+        case["borrower"] = case_data["borrower"]
+        case["propertyDetails"] = case_data["propertyDetails"]
+        case["emdref"] = case_data["emdref"]
 
         case_list["cases"].append(case)
 
@@ -39,7 +45,7 @@ def getCases():
         jsonFile.write(json.dumps(case_list, sort_keys=True, indent=4, separators=(',', ': ')))
 
         #Build response
-        resp = Response('{"applicationReference" : "' + case["applicationReference"]+ '"}', status=200, mimetype='application/json')
+        resp = Response('{"submissionRef" : "' + case["submissionRef"]+ '", "applicationReference" : "' + case["applicationReference"]+ '"}', status=200, mimetype='application/json')
 
         return resp
 
