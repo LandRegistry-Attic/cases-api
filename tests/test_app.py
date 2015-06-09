@@ -6,7 +6,7 @@ from application import app
 from application.utils import get_reference
 
 submission_ref = "ZYX9873"
-case_data = '{ "dateReceived": "1993-11-01T12:00:00Z", "submissionRef": "' + submission_ref + '", "keyNumber": "KEY3243", "amountPaid": "12000", "lender": "GE Money Home Finance Limited", "mortgageDate": "1993-08-13T12:00:00Z", "titleNumber": "DN9"}'
+case_data = '{ "dateReceived": "1993-11-01T12:00:00Z", "submissionRef": "' + submission_ref + '", "keyNumber": "KEY3243", "amountPaid": "12000", "lender": "GE Money Home Finance Limited", "mortgageDate": "1993-08-13T12:00:00Z", "titleNumber": "DN9", "borrower": "", "propertyDetails": "", "emdref": ""}'
 
 class TestCaseAPI(unittest.TestCase):
 

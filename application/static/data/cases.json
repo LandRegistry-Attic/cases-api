@@ -75,6 +75,19 @@
             "lender": "GE Money Home Finance Limited",
             "mortgageDate": "2007-08-13T12:00:00Z",
             "titleNumber": "DT91660"
+        },
+        {
+            "amountPaid": "12000",
+            "applicationReference": "AB32",
+            "borrower": "",
+            "dateReceived": "1993-11-01T12:00:00Z",
+            "emdref": "",
+            "keyNumber": "KEY3243",
+            "lender": "GE Money Home Finance Limited",
+            "mortgageDate": "1993-08-13T12:00:00Z",
+            "propertyDetails": "",
+            "submissionRef": "ZYX9873",
+            "titleNumber": "DN9"
         }
     ]
 }
