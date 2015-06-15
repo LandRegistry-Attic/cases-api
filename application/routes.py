@@ -1,7 +1,7 @@
 import json
 
 from application import app
-from .utils import get_reference
+from .utils import add_to_daylist
 
 from flask import request, Response
 
@@ -18,17 +18,17 @@ def getCases():
     else: #POST will trigger this leg
         #Get case information from POST body
         case_data = request.get_json()
+        title_number = case_data["titleNumber"]
+        application_reference = add_to_daylist(title_number)
 
         #Get current case list
         jsonFile=open('application/static/data/cases.json')
         case_list = json.load(jsonFile)
 
-        applicationReference = get_reference()
-
         #Create a new case from the case_data received
         case = {}
-        case["titleNumber"] = case_data["titleNumber"]
-        case["applicationReference"] = applicationReference
+        case["titleNumber"] = title_number
+        case["applicationReference"] = application_reference
         case["dateReceived"] = case_data["dateReceived"]
         case["mortgageDate"] = case_data["mortgageDate"]
         case["lender"] = case_data["lender"]
