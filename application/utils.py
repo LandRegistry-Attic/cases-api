@@ -11,8 +11,8 @@ def add_to_daylist(title_number):
 
     #reference = "AB" + ref_number
 
-    response = requests.get('http://localhost:8888/' + title_number)
+    response = requests.post('http://localhost:8888/cases/' + title_number)
     data = response.json()
-    reference = data["ABR"]
+    reference = data["abr"]
 
     return reference
