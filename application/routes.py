@@ -19,6 +19,10 @@ def getCases():
         #Get case information from POST body
         case_data = request.get_json()
         title_number = case_data["titleNumber"]
+
+        ##title_validation_code = validate_title(title_number)
+        ##if title_validation_code == 1:
+
         application_reference = add_to_daylist(title_number)
 
         #Get current case list
@@ -47,6 +51,9 @@ def getCases():
         #Build response
         resp = Response('{"submissionRef" : "' + case["submissionRef"]+ '", "applicationReference" : "' + case["applicationReference"]+ '"}', status=200, mimetype='application/json')
 
+        ##else:
+        ##    resp = "title invalid"
+
         return resp
 
 
@@ -55,3 +62,6 @@ def getCase(caseid):
     json_data=open('application/static/data/' + caseid + '.json')
     data = json.load(json_data)
     return json.dumps(data)
+
+def validate_title(title_number):
+    return 1
