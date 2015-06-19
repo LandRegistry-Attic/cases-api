@@ -16,9 +16,5 @@ def submit_new_case(case_info)
   end
       parsed_response = JSON.parse(response.body)
 
-  if (parsed_response["submissionRef"] != case_info["submissionRef"]) then
-    raise "submissionRef does not relate to digital ref"
-  end
-
-  return response.body
+  return parsed_response
 end
