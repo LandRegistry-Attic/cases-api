@@ -3,14 +3,11 @@ As a customer I need Land Registry to be able to accept my application So that I
 
 
 Acceptance Criteria
-add correct data to end of database list in time and date order - borower name, lender name, mortgage date, property details, title number, md ref, key number, applicant details, applicant reference, amount paid
+add correct data to end of database list - borrower name, lender name, mortgage date, property details, title number, md ref, key number, applicant details, applicant reference, amount paid
 
+@run_on_DITI_only
+Scenario: Add a new case to the daylist
 
-
-Scenario: Submitting a new case for display at bottom of daylist
-
-Given that a new case has been submitted
-And a unique reference is generated
-When I view the daylist
-Then I see the new case on the daylist
-And the cases are ordered by date and time
+Given I have case information
+When a case is submitted
+Then an ABR is returned
