@@ -14,4 +14,4 @@ def validate_title(title_number):
     data = response.json()
     validation_result = data["validation_result"]
 
-    return validation_result
+    return str(validation_result)

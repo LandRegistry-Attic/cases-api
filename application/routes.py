@@ -21,7 +21,7 @@ def getCases():
         title_number = case_data["titleNumber"]
 
         title_validation_code = validate_title(title_number)
-        if title_validation_code == 1:
+        if title_validation_code == "1":
 
             application_reference = add_to_daylist(title_number)
 
