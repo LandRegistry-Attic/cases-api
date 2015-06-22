@@ -88,6 +88,84 @@
             "propertyDetails": "",
             "submissionRef": "ZYX9873",
             "titleNumber": "DN9"
+        },
+        {
+            "amountPaid": "200,000",
+            "applicationReference": "AB33",
+            "borrower": "Cazza",
+            "dateReceived": "2020-11-01T12:00:00Z",
+            "emdref": "MD501",
+            "keyNumber": "2244095",
+            "lender": "Example Lender",
+            "mortgageDate": "2010-08-13T12:00:00Z",
+            "propertyDetails": "12 Hillview Road, Plymouth PL2 2QS",
+            "submissionRef": "CSAM",
+            "titleNumber": "DN1"
+        },
+        {
+            "amountPaid": "200,000",
+            "applicationReference": "AB34",
+            "borrower": "Cazza",
+            "dateReceived": "2020-11-01T12:00:00Z",
+            "emdref": "MD501",
+            "keyNumber": "2244095",
+            "lender": "Example Lender",
+            "mortgageDate": "2010-08-13T12:00:00Z",
+            "propertyDetails": "12 Hillview Road, Plymouth PL2 2QS",
+            "submissionRef": "CSAM",
+            "titleNumber": "DN1"
+        },
+        {
+            "amountPaid": "200,000",
+            "applicationReference": "AB35",
+            "borrower": "Cazza",
+            "dateReceived": "2020-11-01T12:00:00Z",
+            "emdref": "MD501",
+            "keyNumber": "2244095",
+            "lender": "Example Lender",
+            "mortgageDate": "2010-08-13T12:00:00Z",
+            "propertyDetails": "12 Hillview Road, Plymouth PL2 2QS",
+            "submissionRef": "CSAM",
+            "titleNumber": "DN1"
+        },
+        {
+            "amountPaid": "200,000",
+            "applicationReference": "AB36",
+            "borrower": "Cazza",
+            "dateReceived": "2020-11-01T12:00:00Z",
+            "emdref": "MD501",
+            "keyNumber": "2244095",
+            "lender": "Example Lender",
+            "mortgageDate": "2010-08-13T12:00:00Z",
+            "propertyDetails": "12 Hillview Road, Plymouth PL2 2QS",
+            "submissionRef": "CSAM",
+            "titleNumber": "DN1"
+        },
+        {
+            "amountPaid": "200,000",
+            "applicationReference": "AB37",
+            "borrower": "Cazza",
+            "dateReceived": "2020-11-01T12:00:00Z",
+            "emdref": "MD501",
+            "keyNumber": "2244095",
+            "lender": "Example Lender",
+            "mortgageDate": "2010-08-13T12:00:00Z",
+            "propertyDetails": "12 Hillview Road, Plymouth PL2 2QS",
+            "submissionRef": "CSAM",
+            "titleNumber": "DN1"
+        },
+        {
+            "amountPaid": "200,000",
+            "applicationReference": "AB38",
+            "borrower": "Cazza",
+            "dateReceived": "2020-11-01T12:00:00Z",
+            "emdref": "MD501",
+            "keyNumber": "2244095",
+            "lender": "Example Lender",
+            "mortgageDate": "2010-08-13T12:00:00Z",
+            "propertyDetails": "12 Hillview Road, Plymouth PL2 2QS",
+            "submissionRef": "CSAM",
+            "titleNumber": "DN1"
         }
     ]
 }
