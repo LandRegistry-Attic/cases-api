@@ -15,3 +15,4 @@ def validate_title(title_number):
     validation_result = data["validation_result"]
 
     return str(validation_result)
+
