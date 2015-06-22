@@ -61,6 +61,3 @@ def getCase(caseid):
     json_data=open('application/static/data/' + caseid + '.json')
     data = json.load(json_data)
     return json.dumps(data)
-
-def validate_title(title_number):
-    return 1
