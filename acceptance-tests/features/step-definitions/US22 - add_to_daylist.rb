@@ -14,15 +14,15 @@ Given(/^I have case information$/) do
 end
 
 When(/^a case is submitted$/) do
-  #call submit_new_case function to create new case data
-  case_references = submit_new_case(@case_info)
-  puts case_references
-  @abr = case_references["applicationReference"]
+  #Call submit_new_case function to pass '@case_info' to the CASES_API
+  @cases_api_response = submit_new_case(@case_info)
+  puts @cases_api_response
 end
 
 Then(/^an ABR is returned$/) do
-  if @abr.length != 7 then
-    raise "abr not 7 characters. Abr is #{@abr}"
+    abr = cases_api_response["applicationReference"]
+  if abr.length != 7 then
+    raise "abr not 7 characters. Abr is #{abr}"
   end
 end
 
