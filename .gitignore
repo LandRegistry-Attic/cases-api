@@ -57,3 +57,6 @@ docs/_build/
 target/
 
 application/static/data/reference.txt
+acceptance-tests/Gemfile.lock
+acceptance-tests/report.json
+acceptance-tests/sshot*

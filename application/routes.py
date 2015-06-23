@@ -1,7 +1,7 @@
 import json
 
 from application import app
-from .utils import add_to_daylist
+from .utils import add_to_daylist, validate_title
 
 from flask import request, Response
 
@@ -19,34 +19,40 @@ def getCases():
         #Get case information from POST body
         case_data = request.get_json()
         title_number = case_data["titleNumber"]
-        application_reference = add_to_daylist(title_number)
 
-        #Get current case list
-        jsonFile=open('application/static/data/cases.json')
-        case_list = json.load(jsonFile)
+        title_validation_code = validate_title(title_number)
+        if title_validation_code == "1":
 
-        #Create a new case from the case_data received
-        case = {}
-        case["titleNumber"] = title_number
-        case["applicationReference"] = application_reference
-        case["dateReceived"] = case_data["dateReceived"]
-        case["mortgageDate"] = case_data["mortgageDate"]
-        case["lender"] = case_data["lender"]
-        case["submissionRef"] = case_data["submissionRef"]
-        case["keyNumber"] = case_data["keyNumber"]
-        case["amountPaid"] = case_data["amountPaid"]
-        case["borrower"] = case_data["borrower"]
-        case["propertyDetails"] = case_data["propertyDetails"]
-        case["emdref"] = case_data["emdref"]
+            application_reference = add_to_daylist(title_number)
 
-        case_list["cases"].append(case)
+            #Get current case list
+            jsonFile=open('application/static/data/cases.json')
+            case_list = json.load(jsonFile)
 
-        jsonFile=open('application/static/data/cases.json', "w")
-        jsonFile.write(json.dumps(case_list, sort_keys=True, indent=4, separators=(',', ': ')))
+            #Create a new case from the case_data received
+            case = {}
+            case["titleNumber"] = title_number
+            case["applicationReference"] = application_reference
+            case["dateReceived"] = case_data["dateReceived"]
+            case["mortgageDate"] = case_data["mortgageDate"]
+            case["lender"] = case_data["lender"]
+            case["submissionRef"] = case_data["submissionRef"]
+            case["keyNumber"] = case_data["keyNumber"]
+            case["amountPaid"] = case_data["amountPaid"]
+            case["borrower"] = case_data["borrower"]
+            case["propertyDetails"] = case_data["propertyDetails"]
+            case["emdref"] = case_data["emdref"]
+
+            case_list["cases"].append(case)
+
+            jsonFile=open('application/static/data/cases.json', "w")
+            jsonFile.write(json.dumps(case_list, sort_keys=True, indent=4, separators=(',', ': ')))
+
+        else:
+            application_reference = ""
 
         #Build response
-        resp = Response('{"submissionRef" : "' + case["submissionRef"]+ '", "applicationReference" : "' + case["applicationReference"]+ '"}', status=200, mimetype='application/json')
-
+        resp = Response('{"submissionRef" : "' + case_data["submissionRef"] + '", "applicationReference" : "' + application_reference + '", "TitleValidationCode" : "' + title_validation_code + '"}', status=200, mimetype='application/json')
         return resp
 
 
