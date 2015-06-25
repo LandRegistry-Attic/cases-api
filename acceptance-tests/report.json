@@ -1,323 +1,322 @@
 [
   {
-    "keyword": "Feature",
-    "name": "US22 - Add new case to daylist",
-    "line": 1,
-    "description": "US22 - As a customer I need Land Registry to be able to accept my application So that I can protect my interests\n\nUS33 - As a lender I need to be certain that the title number I have quoted in my application is an existing\nlive title number\nSo that I am able to send my application to LR and LR is able to receive the application\nand register my interest\n\nAcceptance Criteria\nadd correct data to end of database list - borrower name, lender name, mortgage date, property details, title number, md ref, key number, applicant details, applicant reference, amount paid",
     "id": "us22---add-new-case-to-daylist",
-    "uri": "features/US22 - Add to daylist.feature",
+    "description": "US22 - As a customer I need Land Registry to be able to accept my application So that I can protect my interests\n\nUS33 - As a lender I need to be certain that the title number I have quoted in my application is an existing\nlive title number\nSo that I am able to send my application to LR and LR is able to receive the application\nand register my interest\n\nAcceptance Criteria\nadd correct data to end of database list - borrower name, lender name, mortgage date, property details, title number, md ref, key number, applicant details, applicant reference, amount paid",
+    "name": "US22 - Add new case to daylist",
+    "keyword": "Feature",
+    "line": 1,
     "elements": [
       {
-        "keyword": "Scenario",
-        "name": "Add a new case to the daylist for a valid title number",
-        "line": 13,
-        "description": "",
+        "id": "us22---add-new-case-to-daylist;add-a-new-case-to-the-daylist-for-a-valid-title-number",
         "tags": [
           {
             "name": "@run_on_DITI_only",
             "line": 12
           }
         ],
-        "id": "us22---add-new-case-to-daylist;add-a-new-case-to-the-daylist-for-a-valid-title-number",
-        "type": "scenario",
+        "description": "",
+        "name": "Add a new case to the daylist for a valid title number",
+        "keyword": "Scenario",
+        "line": 13,
         "steps": [
           {
-            "keyword": "Given ",
+            "result": {
+              "duration": 0,
+              "status": "passed"
+            },
             "name": "I have case information",
+            "keyword": "Given ",
             "line": 15,
             "match": {
               "location": "features/step-definitions/US22 - add_to_daylist.rb:1"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 240439
             }
           },
           {
-            "keyword": "When ",
+            "result": {
+              "duration": 30000000000,
+              "status": "failed",
+              "error_message": "End of file reached (EOFError)\n./features/lib-rb/submit_new_case.rb:15:in `submit_new_case\u0027\n./features/step-definitions/US22 - add_to_daylist.rb:18:in `/^a case is submitted$/\u0027\nfeatures/US22 - Add to daylist.feature:16:in `When a case is submitted\u0027"
+            },
             "name": "a case is submitted",
+            "keyword": "When ",
             "line": 16,
             "match": {
               "location": "features/step-definitions/US22 - add_to_daylist.rb:16"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 792748900
             }
           },
           {
-            "keyword": "Then ",
+            "result": {
+              "status": "skipped"
+            },
             "name": "an ABR is returned",
+            "keyword": "Then ",
             "line": 17,
             "match": {
               "location": "features/step-definitions/US22 - add_to_daylist.rb:21"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 165185
             }
           },
           {
-            "keyword": "And ",
+            "result": {
+              "status": "skipped"
+            },
             "name": "a Title validation code of 1 is returned",
+            "keyword": "And ",
             "line": 18,
             "match": {
               "location": "features/step-definitions/US22 - add_to_daylist.rb:48"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 61216
             }
           }
-        ]
+        ],
+        "type": "scenario"
       },
       {
-        "keyword": "Scenario",
-        "name": "Do not add a new case to the daylist due to invalid title number",
-        "line": 21,
-        "description": "",
+        "id": "us22---add-new-case-to-daylist;do-not-add-a-new-case-to-the-daylist-due-to-invalid-title-number",
         "tags": [
           {
             "name": "@run_on_DITI_only",
             "line": 20
           }
         ],
-        "id": "us22---add-new-case-to-daylist;do-not-add-a-new-case-to-the-daylist-due-to-invalid-title-number",
-        "type": "scenario",
+        "description": "",
+        "name": "Do not add a new case to the daylist due to invalid title number",
+        "keyword": "Scenario",
+        "line": 21,
         "steps": [
           {
-            "keyword": "Given ",
+            "result": {
+              "duration": 0,
+              "status": "passed"
+            },
             "name": "I have case information",
+            "keyword": "Given ",
             "line": 23,
             "match": {
               "location": "features/step-definitions/US22 - add_to_daylist.rb:1"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 136761
             }
           },
           {
-            "keyword": "And ",
+            "result": {
+              "duration": 0,
+              "status": "passed"
+            },
             "name": "the title number is invalid",
+            "keyword": "And ",
             "line": 24,
             "match": {
               "location": "features/step-definitions/US22 - add_to_daylist.rb:28"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 77237
             }
           },
           {
-            "keyword": "When ",
+            "result": {
+              "duration": 0,
+              "status": "passed"
+            },
             "name": "a case is submitted",
+            "keyword": "When ",
             "line": 25,
             "match": {
               "location": "features/step-definitions/US22 - add_to_daylist.rb:16"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 198549926
             }
           },
           {
-            "keyword": "Then ",
+            "result": {
+              "duration": 0,
+              "status": "passed"
+            },
             "name": "a Title validation code of 3 is returned",
+            "keyword": "Then ",
             "line": 26,
             "match": {
               "location": "features/step-definitions/US22 - add_to_daylist.rb:53"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 195035
             }
           }
-        ]
+        ],
+        "type": "scenario"
       },
       {
-        "keyword": "Scenario",
-        "name": "Do not add a new case to the daylist due to a non existent title number",
-        "line": 29,
-        "description": "",
+        "id": "us22---add-new-case-to-daylist;do-not-add-a-new-case-to-the-daylist-due-to-a-non-existent-title-number",
         "tags": [
           {
             "name": "@run_on_DITI_only",
             "line": 28
           }
         ],
-        "id": "us22---add-new-case-to-daylist;do-not-add-a-new-case-to-the-daylist-due-to-a-non-existent-title-number",
-        "type": "scenario",
+        "description": "",
+        "name": "Do not add a new case to the daylist due to a non existent title number",
+        "keyword": "Scenario",
+        "line": 29,
         "steps": [
           {
-            "keyword": "Given ",
+            "result": {
+              "duration": 0,
+              "status": "passed"
+            },
             "name": "I have case information",
+            "keyword": "Given ",
             "line": 31,
             "match": {
               "location": "features/step-definitions/US22 - add_to_daylist.rb:1"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 134430
             }
           },
           {
-            "keyword": "And ",
+            "result": {
+              "duration": 0,
+              "status": "passed"
+            },
             "name": "the title number does not exist",
+            "keyword": "And ",
             "line": 32,
             "match": {
               "location": "features/step-definitions/US22 - add_to_daylist.rb:33"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 75623
             }
           },
           {
-            "keyword": "When ",
+            "result": {
+              "duration": 0,
+              "status": "passed"
+            },
             "name": "a case is submitted",
+            "keyword": "When ",
             "line": 33,
             "match": {
               "location": "features/step-definitions/US22 - add_to_daylist.rb:16"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 117372097
             }
           },
           {
-            "keyword": "Then ",
+            "result": {
+              "duration": 0,
+              "status": "passed"
+            },
             "name": "a Title validation code of 2 is returned",
+            "keyword": "Then ",
             "line": 34,
             "match": {
               "location": "features/step-definitions/US22 - add_to_daylist.rb:58"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 170358
             }
           }
-        ]
+        ],
+        "type": "scenario"
       },
       {
-        "keyword": "Scenario",
-        "name": "Try to add a case with a closed title number",
-        "line": 38,
-        "description": "",
+        "id": "us22---add-new-case-to-daylist;try-to-add-a-case-with-a-closed-title-number",
         "tags": [
           {
             "name": "@WIP",
             "line": 37
           }
         ],
-        "id": "us22---add-new-case-to-daylist;try-to-add-a-case-with-a-closed-title-number",
-        "type": "scenario",
+        "description": "",
+        "name": "Try to add a case with a closed title number",
+        "keyword": "Scenario",
+        "line": 38,
         "steps": [
           {
-            "keyword": "Given ",
+            "result": {
+              "duration": 0,
+              "status": "passed"
+            },
             "name": "I have case information",
+            "keyword": "Given ",
             "line": 39,
             "match": {
               "location": "features/step-definitions/US22 - add_to_daylist.rb:1"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 120381
             }
           },
           {
-            "keyword": "And ",
+            "result": {
+              "duration": 0,
+              "status": "pending",
+              "error_message": "TODO (Cucumber::Pending)\n./features/step-definitions/US22 - add_to_daylist.rb:44:in `/^the title number is closed and not continued$/\u0027\nfeatures/US22 - Add to daylist.feature:40:in `And the title number is closed and not continued\u0027"
+            },
             "name": "the title number is closed and not continued",
+            "keyword": "And ",
             "line": 40,
             "match": {
               "location": "features/step-definitions/US22 - add_to_daylist.rb:43"
-            },
-            "result": {
-              "status": "pending",
-              "error_message": "TODO (Cucumber::Pending)\n./features/step-definitions/US22 - add_to_daylist.rb:44:in `/^the title number is closed and not continued$/'\nfeatures/US22 - Add to daylist.feature:40:in `And the title number is closed and not continued'",
-              "duration": 8028268
             }
           },
           {
-            "keyword": "When ",
+            "result": {
+              "status": "skipped"
+            },
             "name": "a case is submitted",
+            "keyword": "When ",
             "line": 41,
             "match": {
               "location": "features/step-definitions/US22 - add_to_daylist.rb:16"
-            },
-            "result": {
-              "status": "skipped"
             }
           },
           {
-            "keyword": "Then ",
+            "result": {
+              "status": "skipped"
+            },
             "name": "a title closed message is returned",
+            "keyword": "Then ",
             "line": 42,
             "match": {
               "location": "features/step-definitions/US22 - add_to_daylist.rb:65"
-            },
-            "result": {
-              "status": "skipped"
             }
           }
-        ]
+        ],
+        "type": "scenario"
       }
-    ]
+    ],
+    "uri": "features/US22 - Add to daylist.feature"
   },
   {
-    "keyword": "Feature",
-    "name": "Get a case from API",
-    "line": 1,
-    "description": "",
     "id": "get-a-case-from-api",
-    "uri": "features/get_case_from_api.feature",
+    "description": "",
+    "name": "Get a case from API",
+    "keyword": "Feature",
+    "line": 1,
     "elements": [
       {
-        "keyword": "Scenario",
-        "name": "Get case from api",
-        "line": 3,
-        "description": "",
         "id": "get-a-case-from-api;get-case-from-api",
-        "type": "scenario",
+        "description": "",
+        "name": "Get case from api",
+        "keyword": "Scenario",
+        "line": 3,
         "steps": [
           {
-            "keyword": "Given ",
+            "result": {
+              "duration": 0,
+              "status": "passed"
+            },
             "name": "that a case is lodged",
+            "keyword": "Given ",
             "line": 4,
             "match": {
               "location": "features/step-definitions/get_case_from_api.rb:1"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 390132
             }
           },
           {
-            "keyword": "When ",
+            "result": {
+              "duration": 0,
+              "status": "passed"
+            },
             "name": "I give a valid get request",
+            "keyword": "When ",
             "line": 5,
             "match": {
               "location": "features/step-definitions/get_case_from_api.rb:5"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 27761064
             }
           },
           {
-            "keyword": "Then ",
+            "result": {
+              "duration": 0,
+              "status": "passed"
+            },
             "name": "the case details are returned",
+            "keyword": "Then ",
             "line": 6,
             "match": {
               "location": "features/step-definitions/get_case_from_api.rb:9"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 346760
             }
           }
-        ]
+        ],
+        "type": "scenario"
       }
-    ]
+    ],
+    "uri": "features/get_case_from_api.feature"
   }
 ]
