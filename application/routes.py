@@ -1,7 +1,7 @@
 import json
 
 from application import app
-from .utils import add_to_daylist, validate_title
+from .utils import add_to_daylist, validate_title, get_worklist
 
 from flask import request, Response
 
@@ -12,9 +12,8 @@ def index():
 @app.route('/cases', methods=["GET","POST"])
 def getCases():
     if request.method == 'GET':
-        json_data=open('application/static/data/cases.json')
-        data = json.load(json_data)
-        return json.dumps(data)
+        team_id = '22'
+        return get_worklist(team_id)
     else: #POST will trigger this leg
         #Get case information from POST body
         case_data = request.get_json()

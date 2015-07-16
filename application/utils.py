@@ -16,3 +16,8 @@ def validate_title(title_number):
 
     return str(validation_result)
 
+def get_worklist(team_id):
+    response = requests.post('http://localhost:8888/DaylistAdapter/cases/teamid/' + team_id)
+    worklist = response.json()
+
+    return worklist
