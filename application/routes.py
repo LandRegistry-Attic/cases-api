@@ -1,7 +1,7 @@
 import json
 
 from application import app
-from .utils import add_to_daylist, validate_title, get_worklist
+from .utils import add_to_daylist, validate_title, get_worklist, get_case_details
 
 from flask import request, Response
 
@@ -57,6 +57,7 @@ def getCases():
 
 @app.route('/cases/<caseid>', methods=["GET"])
 def getCase(caseid):
-    json_data=open('application/static/data/' + caseid + '.json')
-    data = json.load(json_data)
-    return json.dumps(data)
+    #json_data=open('application/static/data/' + caseid + '.json')
+    #data = json.load(json_data)
+    #return json.dumps(data)
+    return get_case_details(caseid)
