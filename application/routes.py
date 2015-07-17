@@ -9,8 +9,8 @@ def index():
 @app.route('/cases', methods=["GET","POST"])
 def getCases():
     if request.method == 'GET':
-        # team_id currently hardcoded to 22, future story will exist to correctly ascertain this value
-        team_id = '22'
+        # team_id currently hardcoded to 1578, a team with 6 cases on UACT, future story will exist to correctly ascertain this value
+        team_id = '1578'
         return get_worklist(team_id)
     else: #POST will trigger this leg
         #Get case information from POST body
