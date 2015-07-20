@@ -1,72 +1,86 @@
 [
   {
     "keyword": "Feature",
-    "name": "US22 - Add new case to daylist",
+    "name": "Add new case to daylist",
     "line": 1,
-    "description": "US22 - As a customer I need Land Registry to be able to accept my application So that I can protect my interests\n\nUS33 - As a lender I need to be certain that the title number I have quoted in my application is an existing\nlive title number\nSo that I am able to send my application to LR and LR is able to receive the application\nand register my interest\n\nAcceptance Criteria\nadd correct data to end of database list - borrower name, lender name, mortgage date, property details, title number, md ref, key number, applicant details, applicant reference, amount paid",
-    "id": "us22---add-new-case-to-daylist",
-    "uri": "features/US22 - Add to daylist.feature",
+    "description": "",
+    "id": "add-new-case-to-daylist",
+    "uri": "features/Add to daylist.feature",
     "elements": [
       {
+        "comments": [
+          {
+            "value": "#US22 - As a customer I need Land Registry to be able to accept my application So that I can protect my interests",
+            "line": 2
+          },
+          {
+            "value": "#US33 - As a lender I need to be certain that the title number I have quoted in my application is an existing",
+            "line": 4
+          },
+          {
+            "value": "#live title number So that I am able to send my application to LR and LR is able to receive the application and register my interest",
+            "line": 5
+          }
+        ],
         "keyword": "Scenario",
         "name": "Add a new case to the daylist for a valid title number",
-        "line": 13,
+        "line": 8,
         "description": "",
         "tags": [
           {
             "name": "@run_on_DITI_only",
-            "line": 12
+            "line": 7
           }
         ],
-        "id": "us22---add-new-case-to-daylist;add-a-new-case-to-the-daylist-for-a-valid-title-number",
+        "id": "add-new-case-to-daylist;add-a-new-case-to-the-daylist-for-a-valid-title-number",
         "type": "scenario",
         "steps": [
           {
             "keyword": "Given ",
             "name": "I have case information",
-            "line": 15,
+            "line": 10,
             "match": {
-              "location": "features/step-definitions/US22 - add_to_daylist.rb:1"
+              "location": "features/step-definitions/add_to_daylist.rb:1"
             },
             "result": {
               "status": "passed",
-              "duration": 240439
+              "duration": 97579
             }
           },
           {
             "keyword": "When ",
-            "name": "a case is submitted",
-            "line": 16,
+            "name": "we have received a digital mortgage application",
+            "line": 11,
             "match": {
-              "location": "features/step-definitions/US22 - add_to_daylist.rb:16"
+              "location": "features/step-definitions/add_to_daylist.rb:16"
             },
             "result": {
               "status": "passed",
-              "duration": 792748900
+              "duration": 23819083666
             }
           },
           {
             "keyword": "Then ",
             "name": "an ABR is returned",
-            "line": 17,
+            "line": 12,
             "match": {
-              "location": "features/step-definitions/US22 - add_to_daylist.rb:21"
+              "location": "features/step-definitions/add_to_daylist.rb:21"
             },
             "result": {
               "status": "passed",
-              "duration": 165185
+              "duration": 56047
             }
           },
           {
             "keyword": "And ",
             "name": "a Title validation code of 1 is returned",
-            "line": 18,
+            "line": 13,
             "match": {
-              "location": "features/step-definitions/US22 - add_to_daylist.rb:48"
+              "location": "features/step-definitions/add_to_daylist.rb:48"
             },
             "result": {
               "status": "passed",
-              "duration": 61216
+              "duration": 89113
             }
           }
         ]
@@ -74,63 +88,63 @@
       {
         "keyword": "Scenario",
         "name": "Do not add a new case to the daylist due to invalid title number",
-        "line": 21,
+        "line": 16,
         "description": "",
         "tags": [
           {
             "name": "@run_on_DITI_only",
-            "line": 20
+            "line": 15
           }
         ],
-        "id": "us22---add-new-case-to-daylist;do-not-add-a-new-case-to-the-daylist-due-to-invalid-title-number",
+        "id": "add-new-case-to-daylist;do-not-add-a-new-case-to-the-daylist-due-to-invalid-title-number",
         "type": "scenario",
         "steps": [
           {
             "keyword": "Given ",
             "name": "I have case information",
-            "line": 23,
+            "line": 18,
             "match": {
-              "location": "features/step-definitions/US22 - add_to_daylist.rb:1"
+              "location": "features/step-definitions/add_to_daylist.rb:1"
             },
             "result": {
               "status": "passed",
-              "duration": 136761
+              "duration": 68016
             }
           },
           {
             "keyword": "And ",
             "name": "the title number is invalid",
-            "line": 24,
+            "line": 19,
             "match": {
-              "location": "features/step-definitions/US22 - add_to_daylist.rb:28"
+              "location": "features/step-definitions/add_to_daylist.rb:28"
             },
             "result": {
               "status": "passed",
-              "duration": 77237
+              "duration": 18789
             }
           },
           {
             "keyword": "When ",
-            "name": "a case is submitted",
-            "line": 25,
+            "name": "we have received a digital mortgage application",
+            "line": 20,
             "match": {
-              "location": "features/step-definitions/US22 - add_to_daylist.rb:16"
+              "location": "features/step-definitions/add_to_daylist.rb:16"
             },
             "result": {
               "status": "passed",
-              "duration": 198549926
+              "duration": 170696952
             }
           },
           {
             "keyword": "Then ",
             "name": "a Title validation code of 3 is returned",
-            "line": 26,
+            "line": 21,
             "match": {
-              "location": "features/step-definitions/US22 - add_to_daylist.rb:53"
+              "location": "features/step-definitions/add_to_daylist.rb:53"
             },
             "result": {
               "status": "passed",
-              "duration": 195035
+              "duration": 173600
             }
           }
         ]
@@ -138,63 +152,63 @@
       {
         "keyword": "Scenario",
         "name": "Do not add a new case to the daylist due to a non existent title number",
-        "line": 29,
+        "line": 24,
         "description": "",
         "tags": [
           {
             "name": "@run_on_DITI_only",
-            "line": 28
+            "line": 23
           }
         ],
-        "id": "us22---add-new-case-to-daylist;do-not-add-a-new-case-to-the-daylist-due-to-a-non-existent-title-number",
+        "id": "add-new-case-to-daylist;do-not-add-a-new-case-to-the-daylist-due-to-a-non-existent-title-number",
         "type": "scenario",
         "steps": [
           {
             "keyword": "Given ",
             "name": "I have case information",
-            "line": 31,
+            "line": 26,
             "match": {
-              "location": "features/step-definitions/US22 - add_to_daylist.rb:1"
+              "location": "features/step-definitions/add_to_daylist.rb:1"
             },
             "result": {
               "status": "passed",
-              "duration": 134430
+              "duration": 57941
             }
           },
           {
             "keyword": "And ",
             "name": "the title number does not exist",
-            "line": 32,
+            "line": 27,
             "match": {
-              "location": "features/step-definitions/US22 - add_to_daylist.rb:33"
+              "location": "features/step-definitions/add_to_daylist.rb:33"
             },
             "result": {
               "status": "passed",
-              "duration": 75623
+              "duration": 36310
             }
           },
           {
             "keyword": "When ",
-            "name": "a case is submitted",
-            "line": 33,
+            "name": "we have received a digital mortgage application",
+            "line": 28,
             "match": {
-              "location": "features/step-definitions/US22 - add_to_daylist.rb:16"
+              "location": "features/step-definitions/add_to_daylist.rb:16"
             },
             "result": {
               "status": "passed",
-              "duration": 117372097
+              "duration": 78625656
             }
           },
           {
             "keyword": "Then ",
             "name": "a Title validation code of 2 is returned",
-            "line": 34,
+            "line": 29,
             "match": {
-              "location": "features/step-definitions/US22 - add_to_daylist.rb:58"
+              "location": "features/step-definitions/add_to_daylist.rb:58"
             },
             "result": {
               "status": "passed",
-              "duration": 170358
+              "duration": 27
             }
           }
         ]
@@ -202,48 +216,48 @@
       {
         "keyword": "Scenario",
         "name": "Try to add a case with a closed title number",
-        "line": 38,
+        "line": 33,
         "description": "",
         "tags": [
           {
             "name": "@WIP",
-            "line": 37
+            "line": 32
           }
         ],
-        "id": "us22---add-new-case-to-daylist;try-to-add-a-case-with-a-closed-title-number",
+        "id": "add-new-case-to-daylist;try-to-add-a-case-with-a-closed-title-number",
         "type": "scenario",
         "steps": [
           {
             "keyword": "Given ",
             "name": "I have case information",
-            "line": 39,
+            "line": 34,
             "match": {
-              "location": "features/step-definitions/US22 - add_to_daylist.rb:1"
+              "location": "features/step-definitions/add_to_daylist.rb:1"
             },
             "result": {
               "status": "passed",
-              "duration": 120381
+              "duration": 46882
             }
           },
           {
             "keyword": "And ",
             "name": "the title number is closed and not continued",
-            "line": 40,
+            "line": 35,
             "match": {
-              "location": "features/step-definitions/US22 - add_to_daylist.rb:43"
+              "location": "features/step-definitions/add_to_daylist.rb:43"
             },
             "result": {
               "status": "pending",
-              "error_message": "TODO (Cucumber::Pending)\n./features/step-definitions/US22 - add_to_daylist.rb:44:in `/^the title number is closed and not continued$/'\nfeatures/US22 - Add to daylist.feature:40:in `And the title number is closed and not continued'",
-              "duration": 8028268
+              "error_message": "TODO (Cucumber::Pending)\n./features/step-definitions/add_to_daylist.rb:44:in `/^the title number is closed and not continued$/'\nfeatures/Add to daylist.feature:35:in `And the title number is closed and not continued'",
+              "duration": 73391
             }
           },
           {
             "keyword": "When ",
-            "name": "a case is submitted",
-            "line": 41,
+            "name": "we have received a digital mortgage application",
+            "line": 36,
             "match": {
-              "location": "features/step-definitions/US22 - add_to_daylist.rb:16"
+              "location": "features/step-definitions/add_to_daylist.rb:16"
             },
             "result": {
               "status": "skipped"
@@ -252,9 +266,9 @@
           {
             "keyword": "Then ",
             "name": "a title closed message is returned",
-            "line": 42,
+            "line": 37,
             "match": {
-              "location": "features/step-definitions/US22 - add_to_daylist.rb:65"
+              "location": "features/step-definitions/add_to_daylist.rb:65"
             },
             "result": {
               "status": "skipped"
@@ -289,7 +303,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 390132
+              "duration": 68786
             }
           },
           {
@@ -301,7 +315,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 27761064
+              "duration": 5104741
             }
           },
           {
@@ -313,7 +327,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 346760
+              "duration": 96222
             }
           }
         ]
