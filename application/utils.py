@@ -20,7 +20,7 @@ def get_worklist(team_id):
     response = requests.get('http://localhost:8888/DaylistAdapter/cases/teamid/' + team_id)
     worklist = response.json()
 
-    return str(worklist)
+    return worklist
 
 def get_case_details(abr):
     response = requests.get('http://localhost:8888/DaylistAdapter/case/' + abr)

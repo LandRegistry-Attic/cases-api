@@ -2,6 +2,8 @@ from application import app
 from .utils import add_to_daylist, validate_title, get_worklist, get_case_details
 from flask import request, Response
 
+import json
+
 @app.route('/', methods=["GET"])
 def index():
     return 'Cases API'
@@ -11,7 +13,8 @@ def getCases():
     if request.method == 'GET':
         # team_id currently hardcoded to 1578, a team with 6 cases on UACT, future story will exist to correctly ascertain this value
         team_id = '1578'
-        return get_worklist(team_id)
+        data = get_worklist(team_id)
+        return json.dumps(data)
     else: #POST will trigger this leg
         #Get case information from POST body
         case_data = request.get_json()
@@ -31,4 +34,5 @@ def getCases():
 
 @app.route('/cases/<caseid>', methods=["GET"])
 def getCase(caseid):
-    return get_case_details(caseid)
+    data = get_case_details(caseid)
+    return json.dumps(data)
