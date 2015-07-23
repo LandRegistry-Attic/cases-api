@@ -1,4 +1,5 @@
 import json
+import os.path
 
 from application import app
 from .utils import add_to_daylist, validate_title
@@ -58,6 +59,12 @@ def getCases():
 
 @app.route('/cases/<caseid>', methods=["GET"])
 def getCase(caseid):
-    json_data=open('application/static/data/' + caseid + '.json')
-    data = json.load(json_data)
-    return json.dumps(data)
+    data = None
+    if os.path.exists('application/static/data/' + caseid + '.json'):
+        with open('application/static/data/' + caseid + '.json') as json_data:
+            data = json.load(json_data)
+
+    if data:
+        return json.dumps(data)
+    else:
+        return Response("No case found for {0}".format(caseid), 404)
