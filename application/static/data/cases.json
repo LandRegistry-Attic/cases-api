@@ -1,7 +1,7 @@
 {
     "cases": [
         {
-            "applicationReference": "LR1011",
+            "applicationReference": "BD161873",
             "dateReceived": "1993-11-01T12:00:00Z",
             "entries": [
                 {
@@ -20,7 +20,7 @@
             "titleNumber": "DN1"
         },
         {
-            "applicationReference": "LR0101",
+            "applicationReference": "AV239038",
             "dateReceived": "1997-02-18T00:00:01Z",
             "entries": [
                 {
@@ -556,6 +556,32 @@
             "propertyDetails": "12 Hillview Road, Plymouth PL2 2QS",
             "submissionRef": "CSAM",
             "titleNumber": "DN503122"
+        },
+        {
+            "amountPaid": "4",
+            "applicationReference": "C054LWW",
+            "borrower": "Barry",
+            "dateReceived": "1993-08-13T12:00:00Z",
+            "emdref": "MD001A",
+            "keyNumber": "2244095",
+            "lender": "GE Money Home Finance Limited",
+            "mortgageDate": "1993-08-14",
+            "propertyDetails": "123 Barry Way",
+            "submissionRef": "HGJJG",
+            "titleNumber": "AV239038"
+        },
+        {
+            "amountPaid": "4",
+            "applicationReference": "D054LWW",
+            "borrower": "Barry",
+            "dateReceived": "1993-08-13T12:00:00Z",
+            "emdref": "MD001A",
+            "keyNumber": "2244095",
+            "lender": "GE Money Home Finance Limited",
+            "mortgageDate": "1993-08-14",
+            "propertyDetails": "123 Barry Way",
+            "submissionRef": "HGJJG",
+            "titleNumber": "AV239038"
         }
     ]
 }

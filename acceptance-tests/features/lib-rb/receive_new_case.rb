@@ -1,4 +1,4 @@
-def submit_new_case(case_info)
+def receive_new_case(case_info)
   #CASES_API_DOMAIN has been populated previously in support/env.rb
   uri = URI.parse($CASES_API_DOMAIN)
   #use libraries Net & HTTP to allocate specific host and port parts for the variable
@@ -15,7 +15,7 @@ def submit_new_case(case_info)
   response = http.request(request)
 
   if (response.code != '200') then
-    raise "Unable to submit a case"
+    raise "Unable to receive a case"
   end
       parsed_response = JSON.parse(response.body)
       return parsed_response

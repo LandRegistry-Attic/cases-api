@@ -13,9 +13,9 @@ Given(/^I have case information$/) do
                }
 end
 
-When(/^a case is submitted$/) do
+When(/^we have received a digital mortgage application$/) do
   #Call submit_new_case function to pass '@case_info' to the CASES_API
-  @cases_api_response = submit_new_case(@case_info)
+  @cases_api_response = receive_new_case(@case_info)
 end
 
 Then(/^an ABR is returned$/) do
