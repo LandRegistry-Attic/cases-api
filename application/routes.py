@@ -12,7 +12,7 @@ def index():
 def getCases():
     if request.method == 'GET':
         # team_id currently hardcoded to 1578, a team with 6 cases on UACT, future story will exist to correctly ascertain this value
-        team_id = '1578'
+        team_id = '20007'
         data = get_worklist(team_id)
         #If the cases array is empty
         if not data["cases"]:
