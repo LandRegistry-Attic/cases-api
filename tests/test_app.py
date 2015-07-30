@@ -1,11 +1,10 @@
 import unittest
 import json
-import os
+import mock
 
 from application import app
-
-submission_ref = "ZYX9873"
-case_data = '{ "dateReceived": "1993-11-01T12:00:00Z", "submissionRef": "' + submission_ref + '", "keyNumber": "KEY3243", "amountPaid": "12000", "lender": "GE Money Home Finance Limited", "mortgageDate": "1993-08-13T12:00:00Z", "titleNumber": "DN503122", "borrower": "", "propertyDetails": "", "emdref": ""}'
+from application.utils import validate_title, add_to_daylist
+from stubresponses import submission_ref, case_data, stubcase, stubcaselist, daylist_adapter_response, validate_title_response
 
 class TestCaseAPI(unittest.TestCase):
 
@@ -16,30 +15,54 @@ class TestCaseAPI(unittest.TestCase):
         response = self.app.get('/')
         assert response.status_code == 200
 
-    def test_case_list(self):
+    @mock.patch('requests.get')
+    @mock.patch('requests.Response')
+    def test_case_list(self, mock_response, mock_get):
+        mock_response.json.return_value = stubcaselist
+        mock_response.status_code = 200
+        mock_get.return_value = mock_response
+
         response = self.app.get('/cases')
         response_json = json.loads(response.data.decode())
         cases = response_json['cases']
-        assert len(cases) > 1
-        assert cases[0]['titleNumber'] == 'DN1'
+        assert len(cases) == 2
+        assert cases[0]['titleNumber'] == 'DN503122'
 
-    def test_single_case(self):
+    @mock.patch('requests.get')
+    @mock.patch('requests.Response')
+    def test_single_case(self, mock_response, mock_get):
+        mock_response.json.return_value = stubcase
+        mock_response.status_code = 200
+        mock_get.return_value = mock_response
+
         response = self.app.get('/cases/LR0101')
         response_json = json.loads(response.data.decode())
         case = response_json['case']
-        assert case['titleNumber'] == 'DN1'
-        assert case['entries'][0]['type'] == 'charge'
+        assert case['titleNumber'] == 'DN503122'
 
-    def test_add_new_case(self):
-        # Post a json object to the route and then check that the correct reference is returned in the json
-        # This test also encompasses a test of the get_reference function and so the dedicated test for that has
-        # now been removed.
+    @mock.patch('requests.post')
+    @mock.patch('requests.get')
+    @mock.patch('requests.Response')
+    @mock.patch('requests.Response')
+    def test_add_new_case(self, mock_response1, mock_response2, mock_get, mock_post):
+        app_ref = 'K123ABC'
+
+        #mock the post to daylist adapter
+        mock_response1.json.return_value = daylist_adapter_response
+        mock_response1.status_code = 200
+        mock_post.return_value = mock_response1
+
+        #mock the get to titles api validate title
+        mock_response2.json.return_value = validate_title_response
+        mock_response2.status_code = 200
+        mock_get.return_value = mock_response2
+
         response = self.app.post('/cases', data=case_data, headers={"Content-Type":"application/json"})
         response_json = json.loads(response.data.decode())
 
-        app_ref = response_json['applicationReference']
+        app_ref_back = response_json['applicationReference']
         submission_ref_returned = response_json['submissionRef']
 
         assert response.status_code == 200
-        print app_ref
+        assert app_ref_back == app_ref
         assert submission_ref == submission_ref_returned
