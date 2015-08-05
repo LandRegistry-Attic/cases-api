@@ -1,5 +1,3 @@
-[![Build Status](https://travis-ci.org/LandRegistry/cases-api.svg?branch=master)](https://travis-ci.org/LandRegistry/cases-api)
-
 [![Coverage Status](https://coveralls.io/repos/LandRegistry/cases-api/badge.svg?branch=unit-tests)](https://coveralls.io/r/LandRegistry/cases-api?branch=unit-tests)
 
 # Cases API
